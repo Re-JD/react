@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Comment () {
+function Comment (props) {
 
     return (
         <>
-        <Text>댓글</Text>
+        <Text>{props.UploadImage}</Text>
         </>
     );
 }
-const Text = styled.p`
+const Text = styled.img`
     font-size: 20px;
 `;
 export default Comment;

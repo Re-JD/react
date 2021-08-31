@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Content () {
-
+const Content = (props) => {
+    
     return (
-        <>
-        <Text>내용</Text>
-        </>
-    );
+        <Text>{props.Context}</Text>
+    )
 }
 const Text = styled.p`
     font-size: 20px;

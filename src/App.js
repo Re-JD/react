@@ -1,17 +1,24 @@
 import './App.css';
 import Headers from './components/headers';
 import PostBox from './container/postbox';
+import { Component } from 'react';
 
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
 
-function App() {
-  return (
-    <div>
+    };
+  }
+
+  render() {
+    return (
+      <div>
       <Headers/>
       <PostBox/>
-      <PostBox/>
-      <PostBox/>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
