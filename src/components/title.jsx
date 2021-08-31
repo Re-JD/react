@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Title = (props) => {
-    console.log(props)
+const Title = (title) => {
+    console.log(title)
     return (
-        <Text>{props.Title}</Text>
+        <Text>{title}</Text>
     )
 }
 

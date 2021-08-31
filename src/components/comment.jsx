@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Comment (props) {
-
+function Comment (comment) {
+    console.log(comment)
     return (
         <>
-        <Text>{props.UploadImage}</Text>
+        <Text src={comment}></Text>
         </>
     );
 }

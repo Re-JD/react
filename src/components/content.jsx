@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Content = (props) => {
-    
+const Content = (content) => {
+    console.log(content)
     return (
-        <Text>{props.Context}</Text>
+        <Text>{content.Context}</Text>
     )
 }
 const Text = styled.p`
