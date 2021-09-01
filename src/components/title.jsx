@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Title = (title) => {
-    console.log(title)
+const Title = (props) => {
+    console.log(props)
     return (
-        <Text>{title}</Text>
+        <Text>{props.title}</Text>
     )
 }
 
-const Text = styled.p`
+const Text = styled.h1`
     font-size: 20px;
 `;
 

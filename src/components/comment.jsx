@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Comment (comment) {
-    console.log(comment)
+function Comment (props) {
+    console.log(props)
     return (
         <>
-        <Text src={comment}></Text>
+        <Text src={props.comment}></Text>
         </>
     );
 }
