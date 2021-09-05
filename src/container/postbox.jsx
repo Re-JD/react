@@ -26,13 +26,15 @@ function PostBox() {
 
     if (!posts) return null;
     return (
-        <Post>
+        <div>
             {posts.post_list.map((post,idx) => (
-                <Title key={idx} props={post.Title}/>,
-                <Content key={idx} props={post.Context}/>,
-                <Comment key={idx} props={post.UploadImage}/>
+                <Post key={idx}>
+                    <Title title={post.Title}/>
+                    <Content content={post.Context}/>
+                    <Comment comment={post.UploadImage}/>
+                </Post>
             ))}
-        </Post>
+        </div>
     );
 }
 
