@@ -28,11 +28,14 @@ function PostBox() {
     return (
         <div>
             {posts.post_list.map((post,idx) => (
-                <Post key={idx}>
-                    <Title title={post.Title}/>
-                    <Content content={post.Context}/>
-                    <Comment comment={post.UploadImage}/>
-                </Post>
+                idx > 0 ?
+                    <Post key={idx}>
+                        <Title title={post.Title}/>
+                        <Content content={post.Context}/>
+                        <Comment comment={post.UploadImage}/>
+                    </Post> 
+                    : null
+            
             ))}
         </div>
     );
