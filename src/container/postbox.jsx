@@ -10,25 +10,17 @@ function PostBox() {
     const [posts, setPost] = useState(null);
     
     useEffect(() => {
-        const fetchPost = async () => {
-            try {
-                setPost(null);
-                const res = await axios.get(
-                    'http://localhost:8000/insta/post/1'
-                );
-                setPost(res.data);
-            } catch (e) {
-                console.log(e);
-            }
-        };
-        fetchPost();
+        axios.get('/insta/post/1').then((response) => {
+            setPost(response.data);
+            console.log(response);
+        })
     }, []);
 
     if (!posts) return null;
     return (
         <div>
             {posts.post_list.map((post,idx) => (
-                idx > 0 ?
+                idx >= 0 ?
                     <Post key={idx}>
                         <Title title={post.Title}/>
                         <Content content={post.Context}/>
