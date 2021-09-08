@@ -3,7 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Content from '../components/content';
 import Title from '../components/title';
-import Comment from '../components/comment';
+import ImageBox from '../components/imagebox';
 
 function PostBox() {
 
@@ -24,7 +24,7 @@ function PostBox() {
                     <Post key={idx}>
                         <Title title={post.Title}/>
                         <Content content={post.Context}/>
-                        <Comment comment={post.UploadImage}/>
+                        <ImageBox image={post.UploadImage}/>
                     </Post> 
                     : null
             
