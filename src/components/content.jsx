@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Content = (props) => {
-    console.log(props)
+    //console.log(props)
     return (
         <Text>{props.content}</Text>
     )

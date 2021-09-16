@@ -8,26 +8,39 @@ import ImageBox from '../components/imagebox';
 function PostBox() {
 
     const [posts, setPost] = useState(null);
-    
+
+    /*
     useEffect(() => {
-        axios.get('/insta/post/1').then((response) => {
+        axios.get('http://127.0.0.1:3000/insta/post/1').then((response) => {
             setPost(response.data);
             console.log(response);
         })
+    }, []);*/
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            try {
+                setPost(null);
+                const res = await axios.get(
+                    'http://localhost:8000/insta/post/1'
+                );
+                setPost(res.data);
+            } catch (e){
+                console.log("error");
+            }
+        };
+        fetchPost();
     }, []);
 
     if (!posts) return null;
     return (
         <div>
             {posts.post_list.map((post,idx) => (
-                idx >= 0 ?
-                    <Post key={idx}>
-                        <Title title={post.Title}/>
-                        <Content content={post.Context}/>
-                        <ImageBox image={post.UploadImage}/>
-                    </Post> 
-                    : null
-            
+                <Post key={idx}> 
+                    <Title title={post.Title}/>
+                    <Content content={post.Context}/>
+                    <ImageBox image={post.UploadImage}/>
+                </Post>
             ))}
         </div>
     );
@@ -38,4 +51,5 @@ const Post = styled.div`
     margin: 10px;
     padding: 10px;
 `;
+
 export default PostBox;

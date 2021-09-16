@@ -14,9 +14,9 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Headers/>
-      <PostBox/>
-    </div>
+        <Headers/>
+        <PostBox/>
+      </div>
     );
   }
 }

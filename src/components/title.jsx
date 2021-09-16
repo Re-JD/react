@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const Title = (props) => {
-    console.log(props)
+    //console.log(props)
     return (
         <Text>{props.title}</Text>
     )
