@@ -3,11 +3,12 @@ import React from 'react';
 
 function ImageBox (props) {
     console.log(props)
+    const url = props.image.map((props,idx) => (
+        "http://"+{props}
+    ))
     return (
         <>
-        {props.image.map((props,idx) => (
-            <img key={idx} src={props}/>
-        ))}
+        <img src={url}/>
         </>
     );
 }
