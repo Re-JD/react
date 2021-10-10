@@ -9,15 +9,15 @@ function PostBox() {
 
     const [posts, setPost] = useState(null);
 
-    /*
+    
     useEffect(() => {
-        axios.get('http://127.0.0.1:3000/insta/post/1').then((response) => {
+        axios.get('/insta/post/1').then((response) => {
             setPost(response.data);
             console.log(response);
         })
-    }, []);*/
+    }, []);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const fetchPost = async () => {
             try {
                 setPost(null);
@@ -30,7 +30,7 @@ function PostBox() {
             }
         };
         fetchPost();
-    }, []);
+    }, []);*/
 
     if (!posts) return null;
     return (
